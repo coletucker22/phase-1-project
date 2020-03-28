@@ -1,0 +1,38 @@
+Inspirational Quotes
+    Forismatic
+    http://forismatic.com/en/api/
+
+    Quotes Free API
+    https://type.fit/api/quotes
+
+    RapidAPI
+    https://rapidapi.com/HealThruWords/api/universal-inspirational-quotes
+
+Movie Quotes
+    MovieQuotes API
+    https://rapidapi.com/juanroldan1989/api/moviequotes
+
+General Quotes
+    They Said So Quotes API
+    http://quotes.rest/
+
+    FavQs.com
+    https://favqs.com/api
+
+Famous Quotes
+    QuoteGarden
+    https://pprathameshmore.github.io/QuoteGarden/
+
+Breaking Bad Quotes
+    https://breakingbadquotes.xyz/
+
+Ron Swanson Quotes
+    http://ron-swanson-quotes.herokuapp.com/v2/quotes
+
+Lord of the Rings Quotes
+    The One API
+    https://the-one-api.herokuapp.com/
+
+Kanye West Quotes
+    kanye.rest
+    https://kanye.rest/
