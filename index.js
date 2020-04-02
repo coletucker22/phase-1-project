@@ -1,10 +1,11 @@
 //-------------------------------------------------------------------
 // EventListener for a Inspirational Quotes Button
 const btnElInsp = document.getElementById("inspQuotesButton");
+const pElInspQuote = document.getElementById("inspQuote");
+const pElInspAuthor = document.getElementById("inspAuthor");
 btnElInsp.addEventListener('click', clickInspBtn);
 
 function clickInspBtn () {
-
     fetch("https://type.fit/api/quotes")                        //this url returns a full array of Inspirational Quotes
         .then(extractJSON)                                      //we can extract the JSON data and just randomly pick one
         .then(useTheData);
@@ -19,8 +20,10 @@ function clickInspBtn () {
             }
             let quoteNumber = getRandomInt(data.length-1);      //we need an int between 0 and (max-1) for array indexing
             //console.log(data[quoteNumber]);
-            console.log(data[quoteNumber].text);
-            console.log(data[quoteNumber].author);
+            // console.log(data[quoteNumber].text);
+            // console.log(data[quoteNumber].author);
+            pElInspQuote.innerHTML = '"' + data[quoteNumber].text + '"';
+            pElInspAuthor.innerHTML = data[quoteNumber].author;
         }
 }
 
@@ -81,6 +84,8 @@ function clickMovBtn () {
 //-------------------------------------------------------------------
 // EventListener for a Famous Quotes Button
 const btnElFam = document.getElementById("famQuotesButton");
+const pElFamQuote = document.getElementById("famQuote");
+const pElFamAuthor = document.getElementById("famAuthor");
 btnElFam.addEventListener('click', clickFamBtn);
 
 function clickFamBtn () {
@@ -97,6 +102,8 @@ function clickFamBtn () {
             //console.log(data);
             console.log(data.quoteText);
             console.log(data.quoteAuthor);
+            pElFamQuote.innerHTML = '"' + data.quoteText + '"';
+            pElFamAuthor.innerHTML = data.quoteAuthor;
         }
 }
 
