@@ -30,6 +30,8 @@ function clickInspBtn () {
 //-------------------------------------------------------------------
 // EventListener for a General Quotes Button
 const btnElGen = document.getElementById("genQuotesButton");
+const pElGenQuote = document.getElementById("genQuote");
+const pElGenAuthor = document.getElementById("genAuthor");
 btnElGen.addEventListener('click', clickGenBtn);
 
 function clickGenBtn () {
@@ -48,8 +50,10 @@ function clickGenBtn () {
 
         function useTheData (data) {
             //console.log(data);
-            console.log(data.quote.body);
-            console.log(data.quote.author);
+            // console.log(data.quote.body);
+            // console.log(data.quote.author);
+            pElGenQuote.innerHTML = '"' + data.quote.body + '"';
+            pElGenAuthor.innerHTML = data.quote.author;
         }
 }
 
@@ -64,8 +68,8 @@ function clickMovBtn () {
         'Authorization': 'Token token=abcd1234',
       });
 
-    fetch("http://movie-quotes-app.herokuapp.com/api/v1/quotes", {
-        headers: myHeaders,})                   
+    fetch("http://movie-quotes-app.herokuapp.com/api/v1/quotes", {  //<----if we dont get a key we may need to use:
+        headers: myHeaders,})                                       // https://github.com/vilaboim/movie-quotes/blob/master/movie-quotes.json
         .then(extractJSON)                      
         .then(useTheData);
 
@@ -100,8 +104,8 @@ function clickFamBtn () {
 
         function useTheData (data) {
             //console.log(data);
-            console.log(data.quoteText);
-            console.log(data.quoteAuthor);
+            // console.log(data.quoteText);
+            // console.log(data.quoteAuthor);
             pElFamQuote.innerHTML = '"' + data.quoteText + '"';
             pElFamAuthor.innerHTML = data.quoteAuthor;
         }
@@ -111,6 +115,8 @@ function clickFamBtn () {
 //-------------------------------------------------------------------
 // EventListener for a Programming Quotes Button
 const btnElPro = document.getElementById("proQuotesButton");
+const pElProQuote = document.getElementById("proQuote");
+const pElProAuthor = document.getElementById("proAuthor");
 btnElPro.addEventListener('click', clickProBtn);
 
 function clickProBtn () {
@@ -125,7 +131,9 @@ function clickProBtn () {
 
         function useTheData (data) {
             //console.log(data);
-            console.log(data.quote);
-            console.log(data.author);
+            // console.log(data.quote);
+            // console.log(data.author);
+            pElProQuote.innerHTML = '"' + data.quote + '"';
+            pElProAuthor.innerHTML = data.author;
         }
 }
