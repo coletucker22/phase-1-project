@@ -50,9 +50,11 @@ body {
   max-width: 42em;
 }
 .cover-heading{
-    font-family: 'Permanent Marker', cursive;
-    
+    font-family: 'Oswald', sans-serif;
+    text-shadow: 2px 2px 4px black;
+    padding: 15px;
 }
+
 
 
 /*
@@ -61,7 +63,9 @@ body {
 .navbar-brand img {
 height: 30px;
 }
+a .nav-link {
 
+}
 
 
  * {
@@ -72,16 +76,16 @@ height: 30px;
    
     padding: 20px;
     font-family: Arial;
-  } */
+  } 
   
-  Center website */
+  Center website 
   .main {
     max-width: 1000px;
     margin: auto;
   }
   
   h1 {
-    font-size: 50px;
+    font-size: 75px;
     word-break: break-all;
   }
   
@@ -119,10 +123,19 @@ height: 30px;
 
   .content img{
     border-radius: 50%;
+    box-shadow: 10px 5px 10px black;
   }
   h4{
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Oswald', sans-serif;
     font-size: 40px;
+    text-shadow: 2px 2px 4px black;
+  }
+  p {
+    text-shadow: 2px 2px 4px black;
+    font-family: 'Open Sans', sans-serif;
+  }
+  .inner p{
+    font-family: Arial;
   }
   /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 900px) {
@@ -138,9 +151,10 @@ height: 30px;
     }
   }
   footer {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
+    color: white;
   }
 
  

@@ -43,17 +43,21 @@ body {
   color: #333;
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
   background-color: #333;
-  /* box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);  */
 }
 
 .cover-container {
   max-width: 42em;
 }
 .cover-heading{
-    font-family: 'Permanent Marker', cursive;
-    
+  font-family: 'Oswald', sans-serif;
+    text-shadow: 2px 2px 4px black;
 }
 
+h4 {
+  font-family: 'Oswald', sans-serif;
+  text-shadow: 2px 2px 4px black;
+  font-size: 40px;
+}
 
 /*
  * Header
@@ -91,6 +95,7 @@ height: 30px;
   
   .row {
     margin: 8px -16px;
+    
   }
   
   /* Add padding BETWEEN each column (if you want) */
@@ -101,23 +106,18 @@ height: 30px;
   
   /* Create four equal columns that floats next to each other */
   .column {
-    float: left;
+    float: none;
     width: 20%;
   }
   
-  /* Clear floats after rows */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
   
   /* Content */
   .content {
-    
     padding: 10px;
-    /* border-color: #333;
-    border-width: 2px; */
+  }
+  p {
+    text-shadow: 2px 2px 4px black;
+    font-family: 'Open Sans', sans-serif;
   }
   
   /* Responsive layout - makes a two column-layout instead of four columns */
@@ -127,17 +127,15 @@ height: 30px;
     }
   }
   
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-    }
-  }
+  /* Footer */
+ 
   footer {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
+    color: white;
   }
+ 
 
  
  
