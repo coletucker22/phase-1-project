@@ -30,6 +30,8 @@ function clickInspBtn () {
 //-------------------------------------------------------------------
 // EventListener for a General Quotes Button
 const btnElGen = document.getElementById("genQuotesButton");
+const pElGenQuote = document.getElementById("genQuote");
+const pElGenAuthor = document.getElementById("genAuthor");
 btnElGen.addEventListener('click', clickGenBtn);
 
 function clickGenBtn () {
@@ -48,25 +50,26 @@ function clickGenBtn () {
 
         function useTheData (data) {
             //console.log(data);
-            console.log(data.quote.body);
-            console.log(data.quote.author);
+            // console.log(data.quote.body);
+            // console.log(data.quote.author);
+            pElGenQuote.innerHTML = '"' + data.quote.body + '"';
+            pElGenAuthor.innerHTML = data.quote.author;
         }
 }
 
 //-------------------------------------------------------------------
 // EventListener for a Movie Quotes Button
 const btnElMov = document.getElementById("movQuotesButton");
+const pElMovQuote = document.getElementById("movQuote");
+const pElMovAuthor = document.getElementById("movAuthor");
 btnElMov.addEventListener('click', clickMovBtn);
 
 function clickMovBtn () {
-    var myHeaders = new Headers({
-        'Content-Type': 'application/json',
-        'Authorization': 'Token token=abcd1234',
-      });
+    // fetch("http://movie-quotes-app.herokuapp.com/api/v1/quotes", {   //<----if we dont get a key we may need to use this guys data:
+                                                                        // https://github.com/vilaboim/movie-quotes/blob/master/movie-quotes.json
 
-    fetch("http://movie-quotes-app.herokuapp.com/api/v1/quotes", {
-        headers: myHeaders,})                   
-        .then(extractJSON)                      
+    fetch("./moviequotes.json")                                         // did not get an api key, so decided to host a local jason file of about
+        .then(extractJSON)                                              // 100 movie quotes and generate a random one
         .then(useTheData);
 
         function extractJSON (response) {
@@ -74,9 +77,15 @@ function clickMovBtn () {
         }
 
         function useTheData (data) {
-            //console.log(data);
-            console.log(data.quote.body);
-            console.log(data.quote.author);
+            function getRandomInt(max) {                        //send this function a max value and it returns an int between 0 and max
+                return Math.floor(Math.random() * Math.floor(max));
+            }
+            let quoteNumber = getRandomInt(data.length-1);      //we need an int between 0 and (max-1) for array indexing
+            //console.log(data[0]);
+            
+            pElMovQuote.innerHTML = '"' + data[quoteNumber].quote + '"';
+            pElMovAuthor.innerHTML = data[quoteNumber].author;
+
         }
 }
 
@@ -100,8 +109,8 @@ function clickFamBtn () {
 
         function useTheData (data) {
             //console.log(data);
-            console.log(data.quoteText);
-            console.log(data.quoteAuthor);
+            // console.log(data.quoteText);
+            // console.log(data.quoteAuthor);
             pElFamQuote.innerHTML = '"' + data.quoteText + '"';
             pElFamAuthor.innerHTML = data.quoteAuthor;
         }
@@ -111,6 +120,8 @@ function clickFamBtn () {
 //-------------------------------------------------------------------
 // EventListener for a Programming Quotes Button
 const btnElPro = document.getElementById("proQuotesButton");
+const pElProQuote = document.getElementById("proQuote");
+const pElProAuthor = document.getElementById("proAuthor");
 btnElPro.addEventListener('click', clickProBtn);
 
 function clickProBtn () {
@@ -125,7 +136,9 @@ function clickProBtn () {
 
         function useTheData (data) {
             //console.log(data);
-            console.log(data.quote);
-            console.log(data.author);
+            // console.log(data.quote);
+            // console.log(data.author);
+            pElProQuote.innerHTML = '"' + data.quote + '"';
+            pElProAuthor.innerHTML = data.author;
         }
 }
