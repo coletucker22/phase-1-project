@@ -24,6 +24,7 @@ function clickInspBtn () {
             // console.log(data[quoteNumber].author);
             pElInspQuote.innerHTML = '"' + data[quoteNumber].text + '"';
             pElInspAuthor.innerHTML = data[quoteNumber].author;
+            $( "#inspContainer" ).effect( "highlight", "slow" );
         }
 }
 
@@ -54,6 +55,7 @@ function clickGenBtn () {
             // console.log(data.quote.author);
             pElGenQuote.innerHTML = '"' + data.quote.body + '"';
             pElGenAuthor.innerHTML = data.quote.author;
+            $( "#genContainer" ).effect( "highlight", "slow" );
         }
 }
 
@@ -62,34 +64,30 @@ function clickGenBtn () {
 const btnElMov = document.getElementById("movQuotesButton");
 const pElMovQuote = document.getElementById("movQuote");
 const pElMovAuthor = document.getElementById("movAuthor");
-btnElMov.addEventListener('click', clickMovBtn);
+//btnElMov.addEventListener('click', clickMovBtn);
 
-function clickMovBtn () {
-    // fetch("http://movie-quotes-app.herokuapp.com/api/v1/quotes", {   //<----if we dont get a key we may need to use this guys data:
-                                                                        // https://github.com/vilaboim/movie-quotes/blob/master/movie-quotes.json
+$( "#movQuotesButton" ).click(function() {
+     fetch("./moviequotes.json")                                         // did not get an api key, so decided to host a local jason file of about
+         .then(extractJSON)                                              // 100 movie quotes and generate a random one
+         .then(useTheData);
 
-    fetch("./moviequotes.json")                                         // did not get an api key, so decided to host a local jason file of about
-        .then(extractJSON)                                              // 100 movie quotes and generate a random one
-        .then(useTheData);
-
-        function extractJSON (response) {
-            return response.json()
-        }
+         function extractJSON (response) {
+             return response.json()
+         }
 
         function useTheData (data) {
             function getRandomInt(max) {                        //send this function a max value and it returns an int between 0 and max
                 return Math.floor(Math.random() * Math.floor(max));
             }
             let quoteNumber = getRandomInt(data.length-1);      //we need an int between 0 and (max-1) for array indexing
-            //console.log(data[0]);
+            console.log(data[0]);
             
-            pElMovQuote.innerHTML = '"' + data[quoteNumber].quote + '"';
+         pElMovQuote.innerHTML = '"' + data[quoteNumber].quote + '"';
             pElMovAuthor.innerHTML = data[quoteNumber].author;
-
-        }
-}
-
-
+            $( "#movContainer" ).effect( "highlight", "slow" );
+        } 
+    
+  });
 //-------------------------------------------------------------------
 // EventListener for a Famous Quotes Button
 const btnElFam = document.getElementById("famQuotesButton");
@@ -113,6 +111,7 @@ function clickFamBtn () {
             // console.log(data.quoteAuthor);
             pElFamQuote.innerHTML = '"' + data.quoteText + '"';
             pElFamAuthor.innerHTML = data.quoteAuthor;
+            $( "#famContainer" ).effect( "highlight", "slow" );
         }
 }
 
@@ -140,5 +139,11 @@ function clickProBtn () {
             // console.log(data.author);
             pElProQuote.innerHTML = '"' + data.quote + '"';
             pElProAuthor.innerHTML = data.author;
+            $( "#proContainer" ).effect( "highlight", "slow" );
         }
 }
+
+//--------------JQuery UI
+//$( "#movQuotesButton" ).click(function() {
+  //  $( "#movQuote" ).show( "fold", 1000 );
+ // });
