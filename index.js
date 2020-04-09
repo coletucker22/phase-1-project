@@ -143,7 +143,47 @@ function clickProBtn () {
         }
 }
 
-//--------------JQuery UI
-//$( "#movQuotesButton" ).click(function() {
-  //  $( "#movQuote" ).show( "fold", 1000 );
- // });
+//----------Granim Trial------------------------------------
+var granimInstance = new Granim({
+    element: '#canvas-image-blending',
+    name: 'granim',
+    elToSetClassOn: 'body',
+    direction: 'diagonal',
+    isPausedWhenNotInView: false,
+    scrollDebounceThreshold: 300,
+    stateTransitionSpeed: 1000,
+    image : {
+        source: 'images/forestbig.png',
+        position: ['center', 'bottom'],
+        stretchMode: ['stretch', 'stretch-if-bigger'],
+        blendingMode: 'multiply',
+    },
+    states : {
+        "default-state": {
+            gradients: [
+                ['#834d9b', '#d04ed6', '#1CD8D2', '#93EDC7'],
+                ['#1CD8D2', '#93EDC7', '#757F9A', '#4389A2']
+            ],
+            transitionSpeed: 5000,
+            loop: true
+        },
+        "dark-state": {
+            gradients: [
+                ['#757F9A', '#D7DDE8', '#1CD8D2', '#93EDC7'],
+                ['#5C258D', '#4389A2', '#1CD8D2', '#93EDC7']
+            ],
+            transitionSpeed: 5000,
+            loop: true
+        }
+    },
+    onStart: function() {
+        console.log('Granim: onStart');
+    },
+    onGradientChange: function(colorDetails) {
+        console.log('Granim: onGradientChange, details: ');
+        console.log(colorDetails);
+    },
+    onEnd: function() {
+        console.log('Granim: onEnd');
+    }
+});
