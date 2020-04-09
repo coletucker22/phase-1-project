@@ -14,7 +14,7 @@ Recognizing the need for positive reinforcement in these difficult times, our te
 - A CSS Framework:
     - [Bootstrap](https://getbootstrap.com/)
 - Remote API's using AJAX: used for our quotes
-    - 
+    - REST API
     - 
     - 
     - 
