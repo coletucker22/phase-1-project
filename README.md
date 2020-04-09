@@ -14,17 +14,11 @@ Recognizing the need for positive reinforcement in these difficult times, our te
 - A CSS Framework:
     - [Bootstrap](https://getbootstrap.com/)
 - Remote API's using AJAX: used for our quotes
-    - Storm Consultancy API
-    - Quotes Free API
-    - FavQ's API
-    - Quote Garden API
-- A locally hosted json file creatively made by Scott for our movie quotes
-==========
     - [Inspirational Quotes API](https://type.fit/api/quotes)
-    - [General Quotes API](https://favqs.com/api/qotd)
-    - [Famous Quotes API](https://quote-garden.herokuapp.com/quotes/random)
-    - [Programming Quotes API](http://quotes.stormconsultancy.co.uk/random.json)
-
+    - [FavQ's General Quotes API](https://favqs.com/api/qotd)
+    - [Quote Garden Famous Quotes API](https://quote-garden.herokuapp.com/quotes/random)
+    - [Storm Consultancy Programming Quotes API](http://quotes.stormconsultancy.co.uk/random.json)
+- A locally hosted json file creatively made by Scott for our movie quotes
 
 
 ## Meet our awesome Team!
