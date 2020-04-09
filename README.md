@@ -13,7 +13,7 @@ Recognizing the need for positive reinforcement in these difficult times, our te
     - [Granim.js](https://sarcadass.github.io/granim.js/)
 - A CSS Framework:
     - [Bootstrap](https://getbootstrap.com/)
-- Five Remote API's using AJAX : used for our quotes
+- Remote API's using AJAX: used for our quotes
     - 
     - 
     - 
