@@ -18,7 +18,8 @@ Recognizing the need for positive reinforcement in these difficult times, our te
     - [FavQ's General Quotes API](https://favqs.com/api/qotd)
     - [Quote Garden Famous Quotes API](https://quote-garden.herokuapp.com/quotes/random)
     - [Storm Consultancy Programming Quotes API](http://quotes.stormconsultancy.co.uk/random.json)
-- A locally hosted json file creatively made by Scott for our movie quotes
+    - [Villaboim Movie Quotes Repo](https://github.com/vilaboim/movie-quotes/blob/master/movie-quotes.json)
+- Two locally hosted json files creatively made by Scott for our programming quotes and movie quotes
 
 
 ## Meet our awesome Team!
