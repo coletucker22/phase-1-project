@@ -80,7 +80,7 @@ $( "#movQuotesButton" ).click(function() {
                 return Math.floor(Math.random() * Math.floor(max));
             }
             let quoteNumber = getRandomInt(data.length-1);      //we need an int between 0 and (max-1) for array indexing
-            console.log(data[0]);
+            //console.log(data[0]);
             
          pElMovQuote.innerHTML = '"' + data[quoteNumber].quote + '"';
             pElMovAuthor.innerHTML = data[quoteNumber].author;
@@ -125,7 +125,8 @@ btnElPro.addEventListener('click', clickProBtn);
 
 function clickProBtn () {
 
-    fetch("http://quotes.stormconsultancy.co.uk/random.json")        //a REST based API, REST does not use Headers          
+    //fetch("http://quotes.stormconsultancy.co.uk/quotes.json")        //a REST based API, REST does not use Headers
+    fetch("./progquotes.json")      
         .then(extractJSON)                      
         .then(useTheData);
 
@@ -134,11 +135,16 @@ function clickProBtn () {
         }
 
         function useTheData (data) {
+            function getRandomInt(max) {                        //send this function a max value and it returns an int between 0 and max
+                return Math.floor(Math.random() * Math.floor(max));
+            }
+            let quoteNumber = getRandomInt(data.length-1);      //we need an int between 0 and (max-1) for array indexing
+
             //console.log(data);
             // console.log(data.quote);
             // console.log(data.author);
-            pElProQuote.innerHTML = '"' + data.quote + '"';
-            pElProAuthor.innerHTML = data.author;
+            pElProQuote.innerHTML = '"' + data[quoteNumber].quote + '"';
+            pElProAuthor.innerHTML = data[quoteNumber].author;
             $( "#proContainer" ).effect( "highlight", "slow" );
         }
 }
