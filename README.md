@@ -14,11 +14,18 @@ Recognizing the need for positive reinforcement in these difficult times, our te
 - A CSS Framework:
     - [Bootstrap](https://getbootstrap.com/)
 - Remote API's using AJAX: used for our quotes
+    - Storm Consultancy API
+    - Quotes Free API
+    - FavQ's API
+    - Quote Garden API
+- A locally hosted json file creatively made by Scott for our movie quotes
+==========
     - [Inspirational Quotes API](https://type.fit/api/quotes)
     - [General Quotes API](https://favqs.com/api/qotd)
     - [Famous Quotes API](https://quote-garden.herokuapp.com/quotes/random)
     - [Programming Quotes API](http://quotes.stormconsultancy.co.uk/random.json)
 - A creatively modified json file (I'm not sure how to describe what Scott did with the moviequotes but it is awesome)
+
 
 ## Meet our awesome Team!
 | **Cole Tucker** | **Daisy Umotong** | **Scott Stringer**| **Kevin Withrow** |
@@ -27,6 +34,6 @@ Recognizing the need for positive reinforcement in these difficult times, our te
 | <a href="https://github.com/coletucker22" target="_blank">`github.com/coletucker22`</a> | <a href="https://github.com/daisy-u" target="_blank">`github.com/daisy-u`</a> | <a href="https://github.com/dmstringer" target="_blank">`github.com/dmstringer`</a> | <a href="https://github.com/KevinWithrow" target="_blank">`github.com/KevinWithrow`</a> |
 
 ## See our project in ACTION!
-<a href="https://sharp-raman-ff18c6.netlify.com/#" target="_blank">`Mood Quotes`</a>
+<a href="https://sharp-raman-ff18c6.netlify.com/#" target="_blank">`    Mood Quotes   `</a>
 
 > © Cole,Daisy,Scott,Kevin. DC Flex c/o 2020.
